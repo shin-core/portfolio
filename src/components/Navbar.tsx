@@ -3,14 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Skills', href: '/skills' },
-  { name: 'Contact', href: '/contact' },
-];
+import { portfolioData } from '@/data/portfolio';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +48,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => {
+            {portfolioData.navigation.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
@@ -106,7 +99,7 @@ export default function Navbar() {
           }`}
         >
           <div className="flex flex-col space-y-2 pt-2">
-            {navItems.map((item) => {
+            {portfolioData.navigation.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
