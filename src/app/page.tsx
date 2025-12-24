@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { portfolioData } from '@/data/portfolio';
 import SocialIcons from '@/components/SocialIcons';
+import Reviews from '@/components/Reviews';
 
 export default function Home() {
   const { personal, socialLinks } = portfolioData;
@@ -77,6 +78,9 @@ export default function Home() {
           </svg>
         </div>
       </main>
+
+      {/* Reviews Section */}
+      <Reviews />
     </div>
   );
 }

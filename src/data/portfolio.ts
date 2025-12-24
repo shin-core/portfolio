@@ -37,6 +37,18 @@ export interface Experience {
   technologies: string[];
 }
 
+export interface Review {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  avatar?: string;
+  rating: number; // 1-5
+  comment: string;
+  date: string;
+  featured?: boolean;
+}
+
 export const portfolioData = {
   personal: {
     name: 'Your Name',
@@ -186,5 +198,68 @@ export const portfolioData = {
       },
     ],
   },
+
+  reviews: [
+    {
+      id: '1',
+      name: 'Sarah Johnson',
+      role: 'Product Manager',
+      company: 'Tech Startup Inc.',
+      rating: 5,
+      comment: 'Working with this developer was an absolute pleasure. The attention to detail and ability to deliver high-quality code on time exceeded our expectations. Highly recommended!',
+      date: '2024-01-15',
+      featured: true,
+    },
+    {
+      id: '2',
+      name: 'Michael Chen',
+      role: 'CTO',
+      company: 'Digital Solutions',
+      rating: 5,
+      comment: 'Exceptional technical skills and great communication. The project was delivered ahead of schedule with clean, maintainable code. Will definitely work together again.',
+      date: '2023-12-20',
+      featured: true,
+    },
+    {
+      id: '3',
+      name: 'Emily Rodriguez',
+      role: 'Design Lead',
+      company: 'Creative Agency',
+      rating: 5,
+      comment: 'Amazing collaboration! The developer understood our vision perfectly and brought it to life. The final product was exactly what we envisioned and more.',
+      date: '2023-11-10',
+      featured: true,
+    },
+    {
+      id: '4',
+      name: 'David Thompson',
+      role: 'Founder',
+      company: 'StartupXYZ',
+      rating: 5,
+      comment: 'Professional, reliable, and incredibly talented. The developer helped us build a robust application that scaled beautifully. Couldn\'t be happier with the results.',
+      date: '2023-10-05',
+      featured: false,
+    },
+    {
+      id: '5',
+      name: 'Lisa Anderson',
+      role: 'Project Manager',
+      company: 'Enterprise Corp',
+      rating: 5,
+      comment: 'Outstanding work ethic and technical expertise. The developer consistently delivered beyond expectations and was always available to help with any questions.',
+      date: '2023-09-18',
+      featured: false,
+    },
+    {
+      id: '6',
+      name: 'James Wilson',
+      role: 'CEO',
+      company: 'Innovation Labs',
+      rating: 5,
+      comment: 'One of the best developers I\'ve had the pleasure of working with. Fast, efficient, and always willing to go the extra mile. The code quality is top-notch.',
+      date: '2023-08-22',
+      featured: false,
+    },
+  ],
 };
 
