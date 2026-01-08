@@ -25,8 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* NProgress Loading Bar - Enhanced styles in LoadingProgress component */
-
 /* Fade-in Animations */
 @keyframes fadeIn {
   from {
@@ -66,4 +64,96 @@ body {
 .animate-fade-in-delay-5 {
   opacity: 0;
   animation: fadeIn 0.8s ease-out 1s forwards;
+}
+
+/* Loading Spinner Animations */
+@keyframes spin-fast {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes spin-medium {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.4), 0 0 30px rgba(236, 72, 153, 0.3);
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.7;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(236, 72, 153, 0.5);
+  }
+}
+
+@keyframes color-shift {
+  0% { 
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  }
+  50% { 
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  }
+  100% { 
+    background: linear-gradient(135deg, #ec4899, #3b82f6);
+  }
+}
+
+@keyframes orbit {
+  from { 
+    opacity: 0.3;
+  }
+  50% { 
+    opacity: 1;
+  }
+  to { 
+    opacity: 0.3;
+  }
+}
+
+@keyframes text-pulse {
+  0%, 100% { 
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  50% { 
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.spin-fast {
+  animation: spin-fast 1s linear infinite;
+}
+
+.spin-medium {
+  animation: spin-medium 1.5s linear infinite;
+}
+
+.spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.color-shift {
+  animation: color-shift 3s ease infinite;
+}
+
+.orbit {
+  animation: orbit 2s ease-in-out infinite;
+}
+
+.text-pulse {
+  animation: text-pulse 2s ease-in-out infinite;
 }
