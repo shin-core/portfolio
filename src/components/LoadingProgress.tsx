@@ -47,7 +47,6 @@ export default function LoadingProgress() {
             #a855f7 75%, 
             #ec4899 100%);
           background-size: 300% 100%;
-          animation: gradientFlow 2s ease infinite, shimmer 3s ease-in-out infinite;
           height: 4px;
           box-shadow: 
             0 0 10px rgba(59, 130, 246, 0.6),
