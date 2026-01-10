@@ -11,7 +11,7 @@ export default function LoginPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
-    console.log('Login:', { email, password, remember });
+    // TODO: Implement authentication logic
   };
 
   return (
