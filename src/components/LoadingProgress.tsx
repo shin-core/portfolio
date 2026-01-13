@@ -136,34 +136,11 @@ export default function LoadingProgress() {
             transform: rotate(3deg) translate(0px, -4px) scale(1.1);
           }
         }
-
-        /* Animated particles effect */
-        #nprogress::before {
-          content: '';
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 4px;
-          background: linear-gradient(90deg, 
-            transparent,
-            rgba(255, 255, 255, 0.4),
-            transparent);
-          animation: particleMove 2s linear infinite;
-          pointer-events: none;
-        }
-
-        @keyframes particleMove {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100vw); }
-        }
       `}</style>
 
       {isLoading && (
         <div className="fixed inset-0 z-[9998] pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-purple-50/40 to-pink-50/40 dark:from-gray-900/40 dark:via-gray-800/40 backdrop-blur-sm transition-opacity duration-300 animate-pulse" />
-          {/* Animated waves */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[wave_3s_ease-in-out_infinite]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-purple-50/40 to-pink-50/40 dark:from-gray-900/40 dark:via-gray-800/40 backdrop-blur-sm transition-opacity duration-300" />
         </div>
       )}
     </>
